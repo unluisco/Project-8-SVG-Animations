@@ -75,19 +75,21 @@ nav a:not(:last-of-type) { margin-right: 25px; }
 .logo:hover { transform: scale(1.2); }
 
 .logo-title {
-	display: none;
 	color: #eaaa7f;
 	text-transform: uppercase;
 	margin: 0;
 }
 
-.logo-text { fill: #eaaa7f; }
+.logo-text {
+	display: none;
+	fill: #eaaa7f;
+}
 
-@media (max-width: 425px) {
+@media (min-width: 425px) {
 
-	.logo-title { display: block; }
+	.logo-title { display: none; }
 
-	.logo-text { display: none; }
+	.logo-text { display: inline; }
 }
 
 .logo-dog { fill: #f4c6a6; }
