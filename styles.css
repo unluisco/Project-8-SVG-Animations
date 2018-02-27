@@ -5,7 +5,8 @@ body {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 300;
 	color: #111;
-	background: #edeff0;
+	background: url('svgs/background.svg') repeat;
+	background-color: #ddd;
 }
 
 #container {
@@ -13,6 +14,7 @@ body {
 	background: #fff;
 	margin: 0 auto;
 	height: 100%; /* new line */
+	padding-top: 30px;
 }
 
 p {
@@ -26,33 +28,27 @@ a {
 	text-decoration: none;
 	color: #39add1;
 	font-weight: 700;
+	transition: transform .4s;
 }
 
-a:hover {
-	color: #111;
+a:hover { color: #0683a8; }
+
+a:hover svg {
+	fill: #0683a8;
+	transform: scale(1.6);
 }
 
-header {
-	padding-top: 10px;
-}
+header { padding-top: 10px; }
 
 header nav {
 	padding-bottom: 50px;
 	text-align: left;
+	margin-left: 60px;
 }
 
-header nav ul li {
-	display: inline-block;
-	margin-right: 20px;
-}
+main { padding-top: 50px; }
 
-main {
-	padding-top: 50px;
-}
-
-main h2 {
-	font-size: 28px;
-}
+main h2 { font-size: 28px; }
 
 footer {
 	width: 100%;
@@ -60,3 +56,72 @@ footer {
 	padding-bottom: 30px;
 	color: #ba8058;
 }
+
+nav svg {
+	width: 14px;
+	height: 14px;
+	padding-right: 5px;
+	fill: #39add1;
+	transition: transform .4s;
+}
+
+nav a:not(:last-of-type) { margin-right: 25px; }
+
+.logo {
+	width: 140px;
+	transition: transform .4s;
+}
+
+.logo:hover { transform: scale(1.2); }
+
+.logo-title {
+	display: none;
+	color: #eaaa7f;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.logo-text { fill: #eaaa7f; }
+
+@media (max-width: 425px) {
+
+	.logo-title { display: block; }
+
+	.logo-text { display: none; }
+}
+
+.logo-dog { fill: #f4c6a6; }
+
+.logo-bg { fill: #ba8058; }
+
+.corgi {
+	display: inline-block;
+	width: 20%;
+}
+
+.corgi svg {
+	display: inline-block;
+	width: 100%;
+}
+
+.corgi span { width: 100%; }
+
+.body { fill: currentColor; }
+
+.nose-eyes { fill: #2d3339; }
+
+.brows { fill: #da8058; }
+
+.snout { fill: #fbfeff; }
+
+.sable,
+.corgi:nth-of-type(1) span { color: #b97f5b; }
+
+.fawn,
+.corgi:nth-of-type(2) span { color: #e9aa82; }
+
+.red,
+.corgi:nth-of-type(3) span { color: #834b29; }
+
+.stone,
+.corgi:nth-of-type(4) span { color: #52595e; }
